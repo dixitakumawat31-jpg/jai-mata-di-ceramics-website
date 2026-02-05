@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jai Mata Di Ceramics - Premium Tiles & Sanitaryware Showroom in Bhiwandi</title>
+    <meta name="description" content="Discover premium tiles, bathroom fittings, and sanitaryware at Jai Mata Di Ceramics, your trusted showroom in Bhiwandi, Maharashtra. Quality, variety, and expert guidance for homeowners, builders, and designers.">
+    <meta name="keywords" content="tiles, floor tiles, wall tiles, designer tiles, premium tiles, bathroom fittings, sanitaryware, Bhiwandi, Maharashtra, ceramic showroom">
+    <meta name="author" content="Jai Mata Di Ceramics">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            font-weight: bold;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #d4af37; /* Gold accent */
+        }
+        /* Hero Section with Parallax */
+        .hero {
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); /* High-quality tile background */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 15px 30px;
+            background-color: #d4af37;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #b8951a;
+        }
+        /* Sections */
+        section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 20px;
+        }
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Map */
+        .map {
+            height: 400px;
+            margin-top: 40px;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+        }
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links {
+                display: none; /* Simple nav, can add hamburger later */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Jai Mata Di Ceramics</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Where Quality Tiles Meet Timeless Design</h1>
+            <p>Discover premium tiles, bathroom fittings, and sanitaryware at Jai Mata Di Ceramics, your trusted showroom in Bhiwandi.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn">Get a Quote</a>
+                <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20tiles%20from%20Jai%20Mata%20Di%20Ceramics.%20Please%20contact%20me." class="btn">WhatsApp Us</a>
+                <a href="#contact" class="btn">Visit Our Showroom</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>Jai Mata Di Ceramics is a reliable, customer-focused ceramic showroom dedicated to providing high-quality tiles, bathroom fittings, and sanitaryware. We pride ourselves on offering a wide range of products from affordable to luxury options, ensuring honest guidance and exceptional customer satisfaction. Serving Bhiwandi and nearby areas, we are committed to helping homeowners, builders, contractors, and interior designers find the perfect solutions for their projects.</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Floor Tiles">
+                    <h3>Floor Tiles</h3>
+                    <p>Explore our extensive collection of durable and stylish floor tiles, perfect for any space. Contact us for price.</p>
+                    <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20floor%20tiles%20from%20Jai%20Mata%20Di%20Ceramics." class="btn">Inquiry via WhatsApp</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wall Tiles">
+                    <h3>Wall Tiles</h3>
+                    <p>Enhance your walls with our premium wall tiles, available in various designs and finishes. Contact us for price.</p>
+                    <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20wall%20tiles%20from%20Jai%20Mata%20Di%20Ceramics." class="btn">Inquiry via WhatsApp</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Designer & Premium Tiles">
+                    <h3>Designer & Premium Tiles</h3>
+                    <p>Indulge in our designer and premium tile collections for a touch of luxury. Contact us for price.</p>
+                    <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20designer%20tiles%20from%20Jai%20Mata%20Di%20Ceramics." class="btn">Inquiry via WhatsApp</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bathroom Fittings">
+                    <h3>Bathroom Fittings</h3>
+                    <p>Complete your bathroom with our high-quality fittings and accessories. Contact us for price.</p>
+                    <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20bathroom%20fittings%20from%20Jai%20Mata%20Di%20Ceramics." class="btn">Inquiry via WhatsApp</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sanitaryware">
+                    <h3>Sanitaryware</h3>
+                    <p>Discover our range of sanitaryware for modern and functional bathrooms. Contact us for price.</p>
+                    <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20sanitaryware%20from%20Jai%20Mata%20Di%20Ceramics." class="btn">Inquiry via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Phone: <a href="tel:+918983155394">+91 89831 55394</a> | <a href="tel:+919850819028">+91 98508 19028</a></p>
+            <p>Address: Shop no. 2-3, Sai somani Residency, Opp. Northern petrol Pump, Narpoli, Bhiwandi - 421302, Dist - Thane</p>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (optional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Inquiry</button>
+                </form>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.123456789012!2d73.123456!3d19.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjAiTiA3M8KwMDcnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Jai Mata Di Ceramics. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/918983155394?text=Hello%2C%20I%E2%80%99m%20interested%20in%20tiles%20from%20Jai%20Mata%20Di%20Ceramics.%20Please%20contact%20me." class="whatsapp-float" target="_blank">💬</a>
+
+    <script>
+        // Simple form submission (placeholder - in real site, use backend)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you soon.');
+        });
+    </script>
+</body>
+</html>
